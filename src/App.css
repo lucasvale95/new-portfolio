@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+@import url('https://fonts.cdnfonts.com/css/space-age');
+@import url('https://fonts.cdnfonts.com/css/microextendflf');
+@import url('https://fonts.cdnfonts.com/css/quark');
+
+:root {
+    --main-color: #16dcff;
+    --secundary-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width: 1080px){
+    html{
+        font-size: 92%;
+    } 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 720px){
+    html{
+        font-size: 84%;
+    } 
 }
 
-.App-link {
-  color: #61dafb;
+input, textarea, select, button, a {
+    font: 400 1rem sans-serif;    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2, h3, h4, h5, h6, p, a, span {
+    /* font-family: 'MicroExtendFLF', sans-serif; */
+    font-family: 'Quark', sans-serif;
+    font-size: 125%;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
