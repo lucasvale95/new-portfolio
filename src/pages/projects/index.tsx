@@ -7,6 +7,11 @@ import VideoPlayer from "../../components/VideoPlayer";
 import { useState } from 'react'
 import { Link } from "react-router-dom";
 import { database } from "../../database/database";
+import {IoLogoGithub, IoIosShareAlt} from 'react-icons/io'
+import {FaSass, FaNodeJs, FaReact} from 'react-icons/fa'
+import {SiAuth0, SiStyledcomponents, SiNextdotjs, SiFirebase} from 'react-icons/si'
+import {SlPaypal} from 'react-icons/sl'
+import {TbBrandTypescript} from 'react-icons/tb'
 
 export type Project = {
     title: string;
@@ -25,11 +30,8 @@ export default function Projects () {
 
     return (
         <body className={styles.container}>
-            <main className={styles.content} > 
-
-                
+            <main className={styles.content} >   
                 < AnimationStars />
-                
 
                 <div className={styles.contentMain}>
                 
@@ -40,7 +42,6 @@ export default function Projects () {
                         <div className={styles.titleProjects}>
                             <ButtonPrimary title={'Board'} projects={projects} projectRender={projectRender} setProjectRender={setProjectRender}/>
                             <ButtonPrimary title={'Motors Shop'} projects={projects} projectRender={projectRender} setProjectRender={setProjectRender}/>
-                            <ButtonPrimary title={'Coffe'} projects={projects} projectRender={projectRender} setProjectRender={setProjectRender}/>
                             <ButtonPrimary title={'Coffe'} projects={projects} projectRender={projectRender} setProjectRender={setProjectRender}/>
                             <ButtonPrimary title={'Coffe'} projects={projects} projectRender={projectRender} setProjectRender={setProjectRender}/>
                             <ButtonPrimary title={'Coffe'} projects={projects} projectRender={projectRender} setProjectRender={setProjectRender}/>
@@ -55,38 +56,37 @@ export default function Projects () {
                             <div className={styles.title}>
                                 <h2>{projectRender.title}</h2>
                                 <p>{projectRender.description}</p>
-                            </div>
 
+                                <div className={styles.links}>
+                                    <div>
+                                        <Link className={styles.link} to={projectRender.linkGithub}>Github</Link>
+                                        <IoLogoGithub color="var(--main-color)" size={25}/>
+                                    </div>
+                                    <div>
+                                        <Link className={styles.link} to={projectRender.linkProduction}>Para o site</Link>
+                                        <IoIosShareAlt color="var(--main-color)" size={20}/>
+                                    </div>
+                                    
+                                </div>
+
+                                <div className={styles.tools}>
+                                  {projectRender.librariesAndTools.map((elem) => {
+                                    if (elem === "Sass") return <FaSass size={25}/> 
+                                    if (elem === "OAuth") return <SiAuth0 size={25}/> 
+                                    if (elem === "Paypal") return <SlPaypal size={25}/> 
+                                    if (elem === "StyledComponents") return <SiStyledcomponents size={25}/> 
+                                    if (elem === "NodeJs") return <FaNodeJs size={25}/> 
+                                    if (elem === "Typescript") return <TbBrandTypescript size={25}/> 
+                                    if (elem === "NextJS") return <SiNextdotjs size={25}/> 
+                                    if (elem === "ReactJS") return <FaReact size={25}/>
+                                    if (elem === "Firebase") return <SiFirebase size={25}/>
+                                    })}
+                                </div>
+                            </div>
 
                         </div>
-
-                        <div className={styles.description}>
-                            <div className={styles.descriptionTitle}>
-                                <h3>Desenvolvido com</h3>
-
-                                <p>{projectRender.developedWith}</p>
-                            </div>
-
-                            <div className={styles.descriptionTitle}>
-                                <h3>Bibliotecas e Ferramentas</h3>
-
-                                {projectRender.librariesAndTools.map((libraries, index)=> <p key={index}>{libraries}</p>)}
-                            </div>
-
-                            <div className={styles.descriptionTitle}>
-                                <h3>Mais informações</h3>
-
-                                
-                                <Link className={styles.descriptionContainer} to={projectRender.linkProduction}>Ir para o site</Link>
-                                <Link className={styles.descriptionContainer} to={projectRender.linkGithub}>Ver o código</Link>
-                            </div>
-                        </div>
-
                     </section>
-
-                    
                 </div>
-
             </main>
         </body>
     )

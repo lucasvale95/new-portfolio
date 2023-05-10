@@ -34,9 +34,10 @@
     height: 100vh;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;  
+    gap: 50px;
 
     .titleProjects{
         display: flex;
@@ -80,29 +81,31 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 50%;
+        width: 70%;
         max-width: 1200px;
         // height: 45%;
         background-color: #000;
         z-index: 55;
+        margin-bottom: 100px;
 
         @media (max-width: 1980px) {
-            width: 60%;
+            width: 70%;
             min-width: 1100px;
         }
 
         @media (max-width: 1760px) {
-            width: 70%;
+            width: 80%;
             min-width: 1050px;
         }
 
         @media (max-width: 1440px) {
-            width: 80%;
+            width: 85%;
+            min-height: 420px;
             min-width: 1000px;
         }
 
         @media (max-width: 1280px) {
-            width: 85%;
+            width: 90%;
             min-width: 950px;
         }
 
@@ -122,21 +125,21 @@
         }
 
         .title {
-            width: 25%;
-            min-width: 250px;
+            width: 35%;
+            min-width: 300px;
             height: 100%;
         
-            padding: 1rem;
+            padding: 2rem;
             margin-left: 10px;
         
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             flex-direction: column;
         
             h2{
                 color: var(--secundary-color);
-                margin-bottom: 1rem;
                 text-align: center;
+                scale: 1.5;
             }
         
             p {
@@ -144,13 +147,54 @@
                 line-height: 120%;
                 max-width: 300px;
                 text-align:center
+            }    
+            
+            .links {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-left: 5px;
+                        margin-bottom: 7px;                        
+                    }
+
+                    &:hover {
+                        scale: 1.04;
+                        cursor: pointer;
+                        transition: 0.2s;
+                    }
+                }                
+
+                .link {
+                    color: var(--main-color);
+                    font-size: 1.3rem;
+                }
+            }
+
+            .tools {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+
+                svg {
+                    color: var(--main-color) ;
+                    &:hover{
+                        color: #fff
+                    }
+                }
             }
         }
     }
 
 
     .description {
-
         display: flex;
         align-items: flex-start;
         flex-direction: row;

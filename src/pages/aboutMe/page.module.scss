@@ -1,0 +1,30 @@
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #151515 url(http://localhost:3000/home-bg.jpg) no-repeat center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    opacity: .87; 
+    overflow: hidden;    
+}
+
+.contentMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+

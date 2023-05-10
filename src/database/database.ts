@@ -1,11 +1,10 @@
-
 export const database = [
     {
         title: 'Board',
         description: 'Desenvolvido para ser um gerenciador de tarefas, sendo possível a autenticação por meio de uma conta Github e fazer doação atráves do Gateway do Paypal. Backend 100% funcional com Firebase e ferramentas exclusivas para doadores.',
         video: '/boardApp.mp4',
         developedWith: 'NextJS - Typescript',
-        librariesAndTools: ['Sass', 'Firebase', 'OAuth',  'Gateway Paypal'],
+        librariesAndTools: ["NextJS", "Typescript", 'Sass', 'Firebase', 'OAuth',  'Paypal'],
         linkProduction: 'localhost:3000/',
         linkGithub: 'https://github.com/lucasvale95/board'
     },
@@ -14,7 +13,7 @@ export const database = [
         description: 'Desenvolvido em grupo como trabalho de conclusão de curso. O projeto é uma plataforma de divulgação de anúncios de vendas de carros e motos, com objetivo de facilitar a busca de usuários por veículos à venda e garantir uma interação entre vendedor e comprador com praticidade.',
         video: '/boardApp.mp4',
         developedWith: 'ReactJS',
-        librariesAndTools: ['Styled Component', 'NodeJS', 'Typescript','Via Cep'],
+        librariesAndTools: ['ReactJS', 'StyledComponent', 'NodeJS', 'Typescript'],
         linkProduction: 'localhost:3000/',
         linkGithub: 'https://github.com/lucasvale95/motors_shop'
     },

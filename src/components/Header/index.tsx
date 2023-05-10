@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.scss"
-import {IoLogoLinkedin, IoLogoGithub, IoLogoInstagram} from 'react-icons/io'
+import {IoLogoLinkedin, IoLogoGithub} from 'react-icons/io'
 
 
 export default function Header () {
@@ -20,14 +20,11 @@ export default function Header () {
             </nav>
 
             <div className={styles.socialMedia}>
-              <Link to={'/home'}>
+              <Link to={'https://www.linkedin.com/in/lucasvale95/'}>
                 <IoLogoLinkedin />
               </Link>
-              <Link to={'/home'}>
+              <Link to={'https://github.com/lucasvale95'}>
                 <IoLogoGithub />
-              </Link>
-              <Link to={'/home'}>
-                <IoLogoInstagram />
               </Link>
             </div>
 
