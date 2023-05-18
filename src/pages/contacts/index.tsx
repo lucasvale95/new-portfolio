@@ -3,6 +3,7 @@ import Header from "../../components/Header"
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithubSquare } from "react-icons/fa";
 import styles from './styles.module.scss'
+import HeaderMobile from "../../components/HeaderMobile";
 
 
 export default function Contacts() {
@@ -19,6 +20,7 @@ export default function Contacts() {
                 <div className={styles.totalArea}>
                 
                     <Header />
+                    <HeaderMobile />
 
                     <div className={styles.contentMain}>
                         <section className={styles.sectionForm}>
@@ -40,7 +42,7 @@ export default function Contacts() {
 
                         <section className={styles.sectionSocialMedia}>
 
-                            <h3>Social Midia</h3>
+                            <h3>LinkedIn & GitHub</h3>
                             
                             <div className={styles.socialMedia}>
                                 <div className={styles.linkLinkedin} onClick={()=> window.open('https://www.linkedin.com/in/lucasvale95/', '_blank')}>

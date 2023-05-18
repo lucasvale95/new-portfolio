@@ -16,6 +16,7 @@ interface IButtonProps {
     projects: Project[],
     projectRender: Project,
     setProjectRender: Dispatch<SetStateAction<Project>>
+    // onClick: any
 }
 
 export default function ButtonPrimary ( {title, projects, projectRender, setProjectRender}: IButtonProps ) {

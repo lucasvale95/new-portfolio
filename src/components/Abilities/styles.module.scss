@@ -1,5 +1,5 @@
 .container {
-    width: 44%;
+    width: 40%;
     min-width: 400px;
     max-width: 900px;
     height: 100vh;    
@@ -10,6 +10,20 @@
     justify-content: center;
 
     margin-right: 1rem;
+
+    animation: slide-in 0.9s forwards;
+    transform: translateY(-100%);
+
+    @keyframes slide-in {
+        100% { transform: translateY(0%); }
+    }
+    @-webkit-keyframes slide-in {
+        100% { -webkit-transform: translateY(0%); }
+    }
+
+    @media (max-width: 1050px) {
+        display: none; 
+    } 
 }
 
 .content {
@@ -31,7 +45,7 @@
 
 .chart {
     margin-bottom: 2rem;
-    width: 90%;   
+    width: 100%;   
 
     h4 {
         font-size: 1.3rem;

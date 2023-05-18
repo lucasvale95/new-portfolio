@@ -1,0 +1,178 @@
+.navigation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    min-width: 200px;
+    max-width: 256px;
+    height: 100vh;
+    left: 0;
+
+    background: rgba(255, 255, 255, 0.014); // Make sure this color has an opacity of less than 1
+    backdrop-filter: blur(8px);
+    
+    @media (max-width: 1050px) {
+        display: none;
+    }
+
+    .logo {
+        margin-top: 3rem;
+        height: 15%;
+        width: 100%;
+        padding: 1rem;
+
+        animation: slide-in 1.5s forwards;
+        transform: translateY(-100%);
+        font-family: 'MicroExtendFLF', sans-serif;
+
+        
+
+        @keyframes slide-in {
+            100% { transform: translateY(0%); }
+        }
+        @-webkit-keyframes slide-in {
+            100% { -webkit-transform: translateY(0%); }
+        }
+
+        h1 {   
+            text-align: center; 
+            color: var(--secundary-color);
+            font-size: 1.8rem;
+
+            @media (max-width: 1420px) {
+                font-size: 1.5rem;
+            }
+
+            span{
+                color: var(--main-color);
+                font-family: 'MicroExtendFLF', sans-serif;
+                font-size: 100% !important;
+
+                @media (max-width: 1420px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        height: 70%;
+        width: 100%;
+
+        a {
+            color:var(--secundary-color);
+            font-size: 1.4rem;
+            line-height: 120%;
+            font-weight: 200;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+            
+                background-color: var(--main-color);
+            
+                transform: scaleX(0);
+                transition: transform 0.5s ease-in-out;
+                transform-origin: 100%;
+            }
+
+            &:hover::after {
+                color: var(--main-color);
+                cursor: pointer;
+            
+                transform: scaleX(1);
+                transform-origin: 0%;
+              }
+
+            &:hover {
+                color: var(--main-color);
+            } 
+        }
+
+        .linkOne{
+            animation: slide-in 0.9s forwards;
+            transform: translateX(-100%);
+
+            @keyframes slide-in {
+                100% { transform: translateX(0%); }
+            }
+            @-webkit-keyframes slide-in {
+                100% { -webkit-transform: translateX(0%); }
+        }}
+
+        .linkTwo{
+            animation: slide-in 1.3s forwards;
+            transform: translateX(-100%);
+
+            @keyframes slide-in {
+                100% { transform: translateX(0%); }
+            }
+            @-webkit-keyframes slide-in {
+                100% { -webkit-transform: translateX(0%); }
+        }}
+
+        .linkThree{
+            animation: slide-in 1.7s forwards;
+            transform: translateX(-100%);
+
+            @keyframes slide-in {
+                100% { transform: translateX(0%); }
+            }
+            @-webkit-keyframes slide-in {
+                100% { -webkit-transform: translateX(0%); }
+        }}
+
+        .linkFour{
+            animation: slide-in 2.1s forwards;
+            transform: translateX(-100%);
+
+            @keyframes slide-in {
+                100% { transform: translateX(0%); }
+            }
+            @-webkit-keyframes slide-in {
+                100% { -webkit-transform: translateX(0%); }
+        }}
+    }
+
+    .socialMedia{
+        width: 100%;
+        height: 15%;
+
+        display: flex;
+        justify-content: center;
+
+        gap: 15px;
+        color: var(--secundary-color);
+
+        animation: slide-in 1.5s forwards;
+        transform: translateY(100%);
+
+        @keyframes slide-in {
+            100% { transform: translateY(0%); }
+        }
+        @-webkit-keyframes slide-in {
+            100% { -webkit-transform: translateY(0%); }
+        }
+
+        a{
+            font-size: 1.8rem;
+        }
+
+        a:hover{
+            color: var(--main-color);
+            transform: scale(1.15);
+        }
+    }
+}

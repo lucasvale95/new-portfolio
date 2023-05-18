@@ -13,15 +13,27 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 1080px){
+@media (max-width: 1440px){
     html{
-        font-size: 92%;
+        font-size: 90%;
     } 
 }
 
-@media (max-width: 720px){
+@media (max-width: 1050px){
     html{
-        font-size: 84%;
+        font-size: 80%;
+    } 
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 70%;
+    } 
+}
+
+@media (max-width: 524px){
+    h1{
+        font-size: 55%;
     } 
 }
 
@@ -44,3 +56,4 @@ a{
     text-decoration: none;
     color: inherit;
 }
+

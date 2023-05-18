@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     width: 15%;
+    max-width: 256px;
     min-width: 200px;
     height: 100vh;
     left: 0;
@@ -12,6 +13,9 @@
     background: rgba(255, 255, 255, 0.014); // Make sure this color has an opacity of less than 1
     backdrop-filter: blur(8px);
     
+    @media (max-width: 1050px) {
+        display: none;
+    }
 
     .logo {
         margin-top: 3rem;
@@ -65,7 +69,7 @@
 
         a {
             color:var(--secundary-color);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             line-height: 120%;
             font-weight: 200;
 
@@ -99,7 +103,6 @@
 
         .linkOne{
             animation: slide-in 0.9s forwards;
-            transform: translateX(-100%);
 
             @keyframes slide-in {
                 100% { transform: translateX(0%); }
@@ -110,7 +113,6 @@
 
         .linkTwo{
             animation: slide-in 1.3s forwards;
-            transform: translateX(-100%);
 
             @keyframes slide-in {
                 100% { transform: translateX(0%); }
@@ -121,7 +123,6 @@
 
         .linkThree{
             animation: slide-in 1.7s forwards;
-            transform: translateX(-100%);
 
             @keyframes slide-in {
                 100% { transform: translateX(0%); }
@@ -132,7 +133,6 @@
 
         .linkFour{
             animation: slide-in 2.1s forwards;
-            transform: translateX(-100%);
 
             @keyframes slide-in {
                 100% { transform: translateX(0%); }
@@ -153,7 +153,6 @@
         color: var(--secundary-color);
 
         animation: slide-in 1.5s forwards;
-        transform: translateY(100%);
 
         @keyframes slide-in {
             100% { transform: translateY(0%); }

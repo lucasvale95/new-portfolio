@@ -2,7 +2,8 @@
 import styles from './page.module.scss'
 import ButtonCV from '../../components/ButtonCV'
 import AnimationStars from '../../components/AnimationStars'
-import Header from '../../components/Header'
+import HeaderHome from '../../components/HeaderHome'
+import HeaderMobile from '../../components/HeaderMobile'
 
 export default function Home() {
 
@@ -14,14 +15,17 @@ export default function Home() {
 
         <div className={styles.contentMain}>
           
-          <Header />
+          <HeaderHome />
+          
+          <HeaderMobile />
 
           <section className={styles.intro}>
               <h3>HELLO, WORLD.</h3>
-              <h1>Eu sou Lucas Vale.</h1>
+              <h1>Eu sou o Lucas.</h1>
               <span>DESENVOLVEDOR FULL-STACK</span>
               <ButtonCV />
           </section>
+
         </div>
 
       </main>

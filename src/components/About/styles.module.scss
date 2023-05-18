@@ -1,5 +1,5 @@
 .container {
-    width: 44%;
+    width: 40%;
     min-width: 400px;
     max-width: 900px;
     height: 100vh;    
@@ -10,10 +10,14 @@
     justify-content: center;
 
     margin-right: 1rem;
+    margin-left: 1.5rem;
+
+    @media (max-width: 1050px) {
+    }
 }
 
 .content {
-    width: 80%;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -32,6 +36,16 @@
 
 .description {
 
+    animation: slide-in 0.9s forwards;
+    transform: translateY(100%);
+
+    @keyframes slide-in {
+        100% { transform: translateY(0%); }
+    }
+    @-webkit-keyframes slide-in {
+        100% { -webkit-transform: translateY(0%); }
+    }
+
     p {
         color: #fff;
         text-align: justify;
@@ -39,8 +53,12 @@
         margin-bottom: 10px;
         text-indent: 1rem;
 
+        @media (max-width: 1050px) {
+            font-size: 1.5rem !important
+        }
+
         a {
-            font-size: 1.2rem;
+            font-size: 1.5rem !important;
             color: var(--main-color);
         }
     }
