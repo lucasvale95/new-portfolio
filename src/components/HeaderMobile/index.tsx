@@ -10,7 +10,7 @@ export default function HeaderMobile() {
         <>
             <ul className={`navigation ${toggleMenu}`}>
                 <li>
-                    <Link to={'/'}>Inicial</Link>
+                    <Link to={'/'}>Início</Link>
                     <Link to={'/about-me'}>Sobre</Link>
                     <Link to={'/projects'}>Projetos</Link>
                     <Link to={'/contacts'}>Contato</Link>
